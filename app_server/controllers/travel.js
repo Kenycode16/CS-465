@@ -6,34 +6,20 @@ const options = {
     },
 };
 
+const travel = async (req, res , next ) => {
+    try{
+        const response = await fetch(tripsEndpoint);
+        const json = await response.json();
 
-//var fs = require('fs');
-//var trips = JSON.parse(fs.readFileSync('./data/trips.json','utf8'))
+        // Render the travel view with the fetched data
+        res.render( 'travel',{title : " Travlr Gateways", trips: json });
+    } catch (error) {
+        console.error("Error fetching trips data:", error);
+        // pass the  error to the next middleware
+        next(error);
 
-
-/* GET Travel view */
-
-const travel = async function (req , res, next) {
-    //console.log('TRAVEL CONTROLLER BEGIN');
-    await fetch(tripsEndpoint, options)
-        .then((res) => res.json())
-        .then((json) => {
-            let message = null;
-            if (!(json instanceof Array)){
-                message = "API lookup error";
-                json = [];
-            }else{
-                if(!json.length){
-                    message = "No trips exist in our dashboard";
-                }
-            }
-            
-
-            
-            res.render("travel", {title:"Travlr Getaways", trips: json, message});
-        })
-        .catch((err) => res.status(500).send(err.message));
-    };
+    }
+};
 
 
 module.exports = {

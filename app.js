@@ -24,7 +24,7 @@ handlebars.registerPartials(__dirname + '/app_server/views/partials');
 
 app.set('view engine', 'hbs');
 
-
+require('dotenv').config(); // Load environment variables from .env file
 
 app.use(logger('dev'));
 app.use(express.json());
