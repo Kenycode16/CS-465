@@ -1,13 +1,10 @@
 const express = require('express');
 
 const router = express.Router();
-//
 const tripsController = require('../controllers/trips');
 const authController = require('../controllers/authentication');
 const { authenticateJWT } = require('../config/jwt');
-
 const jwt = require('jsonwebtoken');
-//
 
 
 
@@ -25,9 +22,7 @@ router
 //define route for our trips endpoint 
 router
     .route("/trips")
-
     .get(tripsController.tripsList)
-
     .post(authenticateJWT,tripsController.tripsAddTrip); // Post method add a new trip
 
 
