@@ -1,10 +1,7 @@
 const mongoose = require('mongoose');
 const User = require('../models/user');
-<<<<<<< HEAD
-=======
-const passport = require('passport');
->>>>>>> origin/module7
 
+const passport = require('passport');
 
 
 
@@ -41,13 +38,6 @@ const register = async (req, res) => {
 
     }
 };
-
-<<<<<<< HEAD
-
-module.exports = {
-     register
-
-=======
 const login = (req, res) => {
     // Validate message to ensure that email and password are present.
     if (!req.body.email || !req.body.password) {
@@ -80,6 +70,6 @@ const login = (req, res) => {
 module.exports = {
      register
     ,login
->>>>>>> origin/module7
+
     };
 
