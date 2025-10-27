@@ -10,7 +10,7 @@ On the backend, I implemented a NoSQL MongoDB database. MongoDB was a good fit b
 
 Functionality
 
-JSON (JavaScript Object Notation) is not the same as JavaScript—it’s a lightweight data format that looks like JavaScript objects but is language-independent. JSON acted as the bridge between frontend and backend: the SPA could send and receive structured JSON data from the Express API, which made communication between the client and server consistent and efficient.
+JSON (JavaScript Object Notation) is not the same as JavaScript it’s a lightweight data format that looks like JavaScript objects but is language-independent. JSON acted as the bridge between frontend and backend: the SPA could send and receive structured JSON data from the Express API, which made communication between the client and server consistent and efficient.
 
 During development, I refactored parts of the code to simplify repeated logic and make the application easier to maintain. For example, I created reusable UI components in Angular for trip listings and forms. These components reduced duplication, made the codebase cleaner, and sped up future development by allowing me to adjust one component instead of editing multiple files.
 
