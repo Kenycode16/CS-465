@@ -1,4 +1,4 @@
-#CS 465 – Full Stack Web Application
+CS 465 – Full Stack Web Application
 
 Module Eight Journal & Project Reflection
 
